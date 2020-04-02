@@ -3,7 +3,7 @@
   <PropertyGroup>
     <AssemblyTitle>Stateless</AssemblyTitle>
     <Product>Stateless</Product>
-    <TargetFrameworks>netstandard2.0;netstandard1.0;net45;net40;net472</TargetFrameworks>
+    <TargetFrameworks>netcoreapp3.1</TargetFrameworks>
     <Description>Create state machines and lightweight state machine-based workflows directly in .NET code</Description>
     <Copyright>Copyright © Stateless Contributors 2009-2019</Copyright>
     <NeutralLanguage>en-US</NeutralLanguage>
@@ -29,6 +29,10 @@
   </PropertyGroup>
 
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' OR '$(TargetFramework)' == 'net472' ">
+    <DefineConstants>$(DefineConstants);TASKS</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp3.1|AnyCPU'">
     <DefineConstants>$(DefineConstants);TASKS</DefineConstants>
   </PropertyGroup>
 </Project>

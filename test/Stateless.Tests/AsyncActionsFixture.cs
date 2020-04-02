@@ -2,7 +2,7 @@
 
 using System;
 using System.Threading.Tasks;
-
+using Stateless;
 using Xunit;
 
 namespace Stateless.Tests
